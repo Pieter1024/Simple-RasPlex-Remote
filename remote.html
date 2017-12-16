@@ -16,7 +16,7 @@
 			}									
 			var server = $("#server").val();
 			var client = $("#client").val();			
-			var baseUrl = "http://" + server + ":32400/system/players/" + client + "/";			
+			var baseUrl = "http://" + server + ":3005/player/";
 			var command = jQuery(this).attr('cmd');
 			$.get(baseUrl + command).error(function() {
 				alert('Plex is not responding, troubleshooting tips:\n1) Veify server and client addresses\n2) Check network connectivity\n3) Reboot Plex Home Theater\n4) Reboot Plex Media Server');
@@ -28,7 +28,6 @@
 	<body>
 		<form>
 		  <label for="server">Server hostname or IP address:</label><input id="server" type="text" placeholder="e.g. plex.local"><br />
-		  <label for="client">Client IP address:</label><input id="client" type="text" placeholder="e.g. 192.168.1.15">
 		</form>
 		<img src="buttons.png" style="display:block;margin-left:auto;margin-right:auto;" width="284" height="336" alt="Plex Remote" usemap="#buttonmap">
 		<map name="buttonmap">
